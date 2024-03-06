@@ -267,6 +267,7 @@
         y <- parentY[parent + 1] + 1
 
         ##Fix x and y values to be inside the matrix
+        cat("x = ", x , " y = ", y , "\n")
         if (x > 25) {
             x <- x %/% 25
         }
