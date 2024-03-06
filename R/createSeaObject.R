@@ -130,10 +130,10 @@ createSeaObject <- function(fracTable, parents, timepoints,
                     defaultLabels = defaultLabels,
                     originTimepoint = originTimepoint
     )
-
+    print("seaObject$parents : " , seaObject$parents)
     ## vector with each clones family
     seaObject <- .cloneFamVec(seaObject)
-
+    print("seaObject$parents : " , seaObject$parents)
     # set default colors to start
     seaObject <- .setColors(seaObject, col = col)
 
