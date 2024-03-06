@@ -187,6 +187,7 @@
 
     ## first stablish the color for the initial clones (parent = 0)
     indepClones <- which(seaObject@parents == 0)
+    print("indepClones : ", indepClones)
     if (length(indepClones) > 1) {
         step <-
             25 %/% length(indepClones) #as far away as possible in the matrix
