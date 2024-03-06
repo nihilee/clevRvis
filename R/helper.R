@@ -187,8 +187,8 @@
 
     ## first stablish the color for the initial clones (parent = 0)
     indepClones <- which(seaObject@parents == 0)
-    paste("indepClones : ", indepClones)
-    paste("seaObject@parents : ", seaObject@parents)
+    cat("indepClones : ", indepClones)
+    cat("seaObject@parents : ", seaObject@parents)
     if (length(indepClones) > 1) {
         step <-
             25 %/% length(indepClones) #as far away as possible in the matrix
@@ -359,7 +359,7 @@
 #' @return A seaObject with the cloneFamily slot filled
 #'
 .cloneFamVec <- function(seaObject) {
-    paste("seaObject@parents : ", seaObject@parents)
+    cat("seaObject@parents : ", seaObject@parents)
     numFamilies <- sum(seaObject@parents == 0)
     listFams <- tail(.getFromTo(seaObject), numFamilies)
     cloneFam <- c()
