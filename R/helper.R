@@ -359,6 +359,7 @@
 #' @return A seaObject with the cloneFamily slot filled
 #'
 .cloneFamVec <- function(seaObject) {
+    print("seaObject@parents : ", seaObject@parents)
     numFamilies <- sum(seaObject@parents == 0)
     listFams <- tail(.getFromTo(seaObject), numFamilies)
     cloneFam <- c()
