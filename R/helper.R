@@ -189,7 +189,6 @@
     indepClones <- which(seaObject@parents == 0)
     print("indepClones : ", indepClones)
     print("seaObject@parents : ", seaObject@parents)
-    print("seaObject : ", seaObject)
     if (length(indepClones) > 1) {
         step <-
             25 %/% length(indepClones) #as far away as possible in the matrix
