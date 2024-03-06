@@ -190,26 +190,27 @@
     cat("indepClones : ", indepClones, "\n")
     cat("seaObject@parents : ", seaObject@parents, "\n")
     cat("length(indepClones) : ", length(indepClones), "\n")
-    if (length(indepClones) > 1) {
-        step <-
-            25 %/% length(indepClones) #as far away as possible in the matrix
-        x <- 0
-        for (clone in indepClones) {
-            x <- x + step
-            y <- 1
-            if (x > 25) {
-                x <- x %/% 25
-            }
-            cloneCols[clone] <- colorMatrix[y, x]
-            parentX[clone + 1] <- x
-            parentY[clone + 1] <- y
-        }
-        ##get which clones where not initial
-        branchedClones <-
-            seq_len(nclones)[-which(seq_len(nclones) %in% indepClones)]
-    } else{
-        branchedClones <- seq_len(nclones)
-    }
+    #if (length(indepClones) > 1) {
+    #    step <-
+    #        25 %/% length(indepClones) #as far away as possible in the matrix
+    #    x <- 0
+    #    for (clone in indepClones) {
+    #        x <- x + step
+    #        y <- 1
+    #        if (x > 25) {
+    #            x <- x %/% 25
+    #        }
+    #        cloneCols[clone] <- colorMatrix[y, x]
+    #        parentX[clone + 1] <- x
+   #         parentY[clone + 1] <- y
+   #     }
+   #     ##get which clones where not initial
+   #     branchedClones <-
+   #         seq_len(nclones)[-which(seq_len(nclones) %in% indepClones)]
+   # } else{
+   #     branchedClones <- seq_len(nclones)
+   # }
+    branchedClones <- seq_len(nclones)
 
     ##Deal with the non-initial clones
     for (clone in branchedClones) {
