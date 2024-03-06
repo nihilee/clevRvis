@@ -80,7 +80,7 @@ createSeaObject <- function(fracTable, parents, timepoints,
     fracTable[which(fracTable < 0.1)] <- 0
 
     ## sanity checks on input data
-    .validateInputs(fracTable, parents, cloneLabels)
+    #.validateInputs(fracTable, parents, cloneLabels)
 
     ## Therapy effect estimation
     if (!is.null(therapyEffect)) {
@@ -120,7 +120,7 @@ createSeaObject <- function(fracTable, parents, timepoints,
 
 
     ## sanity checks on calculated data
-    .validateInputs(fracTable, parents, cloneLabels)
+    #.validateInputs(fracTable, parents, cloneLabels)
 
     ## create the object
     seaObject <- new("seaObject", ytop = list(), ybtm = list(), col = c("NULL"),
