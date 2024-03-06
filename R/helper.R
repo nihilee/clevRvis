@@ -266,7 +266,7 @@
             x <- parentX[parent + 1]
         }
         y <- parentY[parent + 1] + 1
-
+        cat("parentX : ", parentX, "parent : ", parent , "\n")
         ##Fix x and y values to be inside the matrix
         cat("x = ", x , " y = ", y , "\n")
         if (x > 25) {
