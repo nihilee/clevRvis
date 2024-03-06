@@ -25,6 +25,7 @@
 
         for (timept in timepts) {
             ##check individual clones
+            cat("fracTable[clone, timept] : ", fracTable[clone, timept] ,  "\n")
             if (fracTable[clone, timept] > 0.000001) {
                 if (startedClone & endedClone) {
                     stop("Clone", clone, "goes from present to absent
